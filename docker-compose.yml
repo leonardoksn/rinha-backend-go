@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "3306:3306"
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234  # Use the specified password "example"
+      MYSQL_DATABASE: transactions   # Customize the database name
+      MYSQL_USER: mysql  # Create a specific user for your application
+      MYSQL_PASSWORD: 1234  # Set a password for this user
