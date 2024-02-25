@@ -6,7 +6,7 @@ import (
 )
 
 func initializeRoutes(r *gin.Engine) {
-
+	handler.InitializeHandler()
 	r.POST("/clientes/:id/transacoes", handler.CreateTransactionHandler)
-	r.GET("/clientes/:id/extrato", handler.ConsultTransactionHandler)	
+	r.GET("/clientes/:id/extrato", handler.ConsultTransactionHandler)
 }
