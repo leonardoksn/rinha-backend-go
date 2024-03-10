@@ -27,3 +27,4 @@ func (r *CreateTransactionRequestBody) Validate() error {
 type CreateTransactionRequestParams struct {
 	Id int `uri:"id"`
 }
+
